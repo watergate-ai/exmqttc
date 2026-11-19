@@ -1,0 +1,17 @@
+# Dependabot version updates (ENG-1764 rollout).
+# Weekly, like the other repos of the org. Minor and patch updates are grouped
+# into one PR per ecosystem; majors stay individual PRs. The open-PR limit is
+# deliberately low (the org default is 5) so the first run does not flood the team.
+
+version: 2
+updates:
+
+  # manifests: mix.exs / mix.lock
+  - package-ecosystem: "mix"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    groups:
+      minor-and-patch:
+        update-types: ["minor", "patch"]
